@@ -12,7 +12,7 @@ Serve this directory with any static web server. No package installation or buil
 
 ## Publish
 
-Live website: https://events.abhishekja.in/
+Live website: https://desievents.luckbhi.com/
 
 Cloudflare Pages project: `desi-on-stage-chicago`. It uses Direct Upload; pushing source does not deploy it. Copy only `index.html`, `styles.css`, `script.js`, `analytics.js`, and `assets/` into a clean staging directory, then run:
 
@@ -20,7 +20,9 @@ Cloudflare Pages project: `desi-on-stage-chicago`. It uses Direct Upload; pushin
 wrangler pages deploy <staging-directory> --project-name desi-on-stage-chicago --branch main
 ```
 
-The GoDaddy `events` CNAME points to `desi-on-stage-chicago.pages.dev`.
+The Cloudflare-managed `luckbhi.com` zone has a `desievents` CNAME pointing to `desi-on-stage-chicago.pages.dev`. The subdomain is attached to the Pages project as an active custom domain with HTTPS.
+
+The former `events.abhishekja.in` custom domain has been detached; no redirect is configured. Chicago remains the current edition. Future city editions can use paths under `desievents.luckbhi.com`, such as `/chicago`, without introducing separate city subdomains.
 
 ## Analytics and privacy
 
