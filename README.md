@@ -28,4 +28,6 @@ Existing GA4 stream `G-KMQVM6H2VK` is preserved in `analytics.js`. Google loads 
 
 ## Artwork
 
+The header, footer, and favicon use a custom SVG charkha (traditional spinning wheel), so the brand symbol cannot be substituted with an emoji by iOS.
+
 `assets/sound-sculpture-patterned.webp` is an original imagegen edit restoring the concept's ivory-on-coral paisley and floral textile print while preserving the chrome microphone, blue vinyl record, spheres, white background, and composition. The website uses optimized WebP. Organizer event artwork is loaded from source providers, with initials as a fallback.
