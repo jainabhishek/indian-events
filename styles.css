@@ -49,3 +49,6 @@
 .listing-updates p{max-width:760px;margin:0 0 16px}
 
 .categories{flex-wrap:wrap}.categories .free-filter{border:1px solid var(--line);border-radius:24px;padding:8px 14px;font-size:15px}.categories .free-filter.selected{border-color:var(--coral);background:#fff3f3}
+
+.event[data-event]{cursor:pointer}.event[data-event] .tickets,.event[data-event] .save{cursor:pointer}
+.event[data-event]:hover .event-title{text-decoration:underline;text-decoration-color:var(--coral);text-underline-offset:4px}
