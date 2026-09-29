@@ -14,6 +14,6 @@ The custom domain `events.abhishekja.in` uses a GoDaddy CNAME named `events` poi
 
 ## Analytics
 
-Set `GA_MEASUREMENT_ID` in `analytics.js` to the GA4 web stream ID for this site. The Google tag loads only after a visitor selects **Allow analytics**. The choice is saved locally and can be changed with the footer's **Analytics choice** button. Declining or revoking consent stops analytics on the next page load.
+The GA4 web stream ID is `G-KMQVM6H2VK` in `analytics.js`. The Google tag loads only after a visitor selects **Allow analytics**. The choice is saved locally and can be changed with the footer's **Analytics choice** button. Declining or revoking consent stops analytics on the next page load.
 
 GA4 receives page views, `select_content` events with a public event `content_id` when a listing link is clicked, and `event_filter` events with `filter_name` when a filter is selected. To report on filter values, create an event-scoped custom dimension for `filter_name` in GA4. No subscriber email addresses are sent by this site.

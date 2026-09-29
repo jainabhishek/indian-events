@@ -1,5 +1,4 @@
-// Set this to the GA4 web stream ID (G-...) for the Desi on Stage account.
-const GA_MEASUREMENT_ID = '';
+const GA_MEASUREMENT_ID = 'G-KMQVM6H2VK';
 const consentKey = 'desi-on-stage-analytics-consent';
 const consentBanner = document.querySelector('#analytics-consent');
 const savedConsent = (() => {
