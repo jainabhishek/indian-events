@@ -47,3 +47,5 @@
 .listing-updates{margin-top:28px;font-size:14px;line-height:1.6;color:var(--ink)}
 .listing-updates summary{cursor:pointer;font-weight:600;padding:12px 0}
 .listing-updates p{max-width:760px;margin:0 0 16px}
+
+.categories{flex-wrap:wrap}.categories .free-filter{border:1px solid var(--line);border-radius:24px;padding:8px 14px;font-size:15px}.categories .free-filter.selected{border-color:var(--coral);background:#fff3f3}
