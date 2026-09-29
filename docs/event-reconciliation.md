@@ -61,3 +61,5 @@ CTU, Eventbrite’s Vik Pandya collection, and Compound Yellow’s Ticketleap pa
 ## Artwork and free filter follow-up
 
 Restored artwork for 41 of the 43 upcoming performances using local source copies. Series and multiple performances share their source artwork. Bollywood on the Beach and Ravi Gupta still use initials because their retrieved sources provided no suitable event artwork. Sources are recorded in each event’s imageSource field. CTU’s event page was successfully retrieved during this follow-up; its poster confirms Kruthi Bhat starts at 5:30 PM. Eventbrite and Compound Yellow artwork were also retrieved successfully. The Free events toggle combines with search, category, and location, and reset clears all filters.
+
+Filter interaction correction: Free events now acts as an exclusive category. Selecting All nights, Music, or Comedy deselects it. The free pill does not inherit the category underline. Browser checks confirm 6 free, 14 comedy, 29 music, and 43 all listings when switching categories.
