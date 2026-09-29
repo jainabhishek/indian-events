@@ -6,3 +6,29 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 
 .analytics-consent{position:fixed;z-index:15;bottom:18px;right:18px;max-width:590px;background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:0 8px 30px #07183020;padding:20px;display:flex;align-items:center;gap:22px}.analytics-consent p{margin:0;font:12px/1.6 var(--sans)}.analytics-actions{display:flex;gap:12px;flex-shrink:0}.analytics-actions button{font:12px var(--sans);padding:11px 12px;border:1px solid var(--ink);white-space:nowrap}.analytics-actions button:last-child{color:white;background:var(--ink)}@media(max-width:760px){.analytics-consent{left:16px;right:16px;bottom:16px;display:block}.analytics-actions{margin-top:12px;justify-content:flex-end}}
+
+/* SVG prevents iOS from replacing brand marks and arrows with emoji. */
+.spark{width:24px;height:24px;flex-shrink:0;stroke:var(--coral);stroke-width:1.5}.small-brand .spark{width:18px;height:18px}.external-arrow{width:14px;height:14px;display:inline-block;vertical-align:-2px;flex-shrink:0}
+@media(max-width:760px){
+  .brand .spark{width:20px;height:20px}
+  .search-location{grid-template-columns:1fr;gap:10px}
+  .search input{font-size:14px}
+  .location select{flex:1;max-width:none;font-size:14px}
+  .event{grid-template-columns:64px minmax(0,1fr) 44px;gap:10px 12px;padding:23px 0}
+  .date{grid-column:1;grid-row:1;align-self:start;padding-top:0}
+  .poster,.poster-fallback{grid-column:1;grid-row:2;width:64px;height:74px;align-self:start}
+  .event-info{grid-column:2;grid-row:1 / span 2;align-self:start}
+  .event h3{font-size:24px;line-height:1.15}
+  .event-kicker{font-size:9px;line-height:1.5;letter-spacing:.7px}
+  .event-description{font-size:14px;line-height:1.45}
+  .event-meta{font-size:12px;line-height:1.55}
+  .tickets{grid-column:2;grid-row:3;justify-self:start;font-size:15px;min-height:44px}
+  .save{grid-column:3;grid-row:1;width:44px;height:44px;align-self:start}
+  footer{display:grid;grid-template-columns:1fr auto;gap:18px 12px}
+  footer p{grid-column:1 / -1;order:initial;line-height:1.5}
+  footer .small-brand{grid-column:1;grid-row:1}
+  footer #privacy-settings{grid-column:2;grid-row:1}
+  footer #about-open{grid-column:1;grid-row:2;justify-self:start}
+  footer button{font-size:12px}
+}
+@media(max-width:380px){.event{grid-template-columns:56px minmax(0,1fr) 44px;column-gap:9px}.poster,.poster-fallback{width:56px;height:66px}.event h3{font-size:22px}.brand .spark{width:18px;height:18px}}
