@@ -8,4 +8,6 @@ Edit the `events` array in `script.js`. Use an event-specific organizer, venue, 
 
 ## Deploy
 
-Publish this directory as a Cloudflare Pages static site. Build command: none. Output directory: `/` (repository root). Add the desired custom domain in Pages, then create the DNS record Cloudflare specifies at the authoritative DNS provider.
+The live site is at [desi-on-stage-chicago.pages.dev](https://desi-on-stage-chicago.pages.dev/). Cloudflare Pages uses Direct Upload, so source commits do not deploy automatically. To deploy, copy `index.html`, `styles.css`, `script.js`, and `hero-v2.png` into a clean directory and run `wrangler pages deploy <directory> --project-name desi-on-stage-chicago --branch main`.
+
+The custom domain `events.abhishekja.in` uses a GoDaddy CNAME named `events` pointing to `desi-on-stage-chicago.pages.dev`.

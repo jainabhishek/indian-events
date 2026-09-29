@@ -9,8 +9,9 @@ const events = [
 ];
 const list=document.querySelector('#event-list');
 function render(filter='all'){
-  const today=new Date();today.setHours(0,0,0,0);
-  const visible=events.filter(event=>new Date(`${event.date}T00:00:00`)>=today).filter(event=>filter==='all'||(filter==='free'?event.free:event.kind===filter));
+  const chicagoDate=Object.fromEntries(new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date()).map(part=>[part.type,part.value]));
+  const today=`${chicagoDate.year}-${chicagoDate.month}-${chicagoDate.day}`;
+  const visible=events.filter(event=>event.date>=today).filter(event=>filter==='all'||(filter==='free'?event.free:event.kind===filter));
   list.replaceChildren();
   if(!visible.length){const p=document.createElement('p');p.className='empty';p.textContent='No upcoming events in this category right now. Check back soon.';list.append(p);return;}
   for(const event of visible){const date=new Date(`${event.date}T12:00:00`);const article=document.createElement('article');article.className='event-card';article.innerHTML=`<div class="date-box"><span>${date.toLocaleString('en-US',{month:'short'}).toUpperCase()}</span><strong>${date.getDate()}</strong></div><div class="event-info"><span class="event-category">${event.category}</span><h3>${event.name}</h3><p class="event-meta">${date.toLocaleString('en-US',{weekday:'long'})}, ${event.time} · ${event.venue}, ${event.city}</p><p class="event-note">${event.note}</p></div><a class="event-link" href="${event.url}" target="_blank" rel="noopener noreferrer" aria-label="View source for ${event.name}">Details & tickets ↗</a>`;list.append(article);}
