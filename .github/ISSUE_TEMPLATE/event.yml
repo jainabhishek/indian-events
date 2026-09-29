@@ -1,0 +1,29 @@
+name: Suggest an event
+description: Suggest an Indian or Indian-origin music or comedy event near Chicago
+title: "Event suggestion: "
+labels: [event suggestion]
+body:
+  - type: input
+    id: artist
+    attributes:
+      label: Performer or event name
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Date and local time
+    validations:
+      required: true
+  - type: input
+    id: venue
+    attributes:
+      label: Venue and city
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official organizer, venue, or ticket URL
+    validations:
+      required: true
