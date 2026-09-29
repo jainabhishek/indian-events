@@ -1,7 +1,6 @@
 name: Suggest an event
 description: Suggest an Indian or Indian-origin music or comedy event near Chicago
 title: "Event suggestion: "
-labels: [event suggestion]
 body:
   - type: input
     id: artist
