@@ -31,3 +31,7 @@ Existing GA4 stream `G-KMQVM6H2VK` is preserved in `analytics.js`. Google loads 
 The header, footer, and favicon use a custom SVG charkha (traditional spinning wheel), so the brand symbol cannot be substituted with an emoji by iOS.
 
 `assets/sound-sculpture-patterned.webp` is an original imagegen edit restoring the concept's ivory-on-coral paisley and floral textile print while preserving the chrome microphone, blue vinyl record, spheres, white background, and composition. The website uses optimized WebP. Event artwork is stored in `assets/events/`, with its source URL recorded as `imageSource` in each event. Local copies avoid broken third-party hotlinks. Initials remain the fallback when suitable artwork is unavailable. Free events is an exclusive category alongside All nights, Music, and Comedy, and combines with search and location filters.
+
+## Mobile layout and feedback
+
+The mobile hero uses cropped background artwork and a compact introduction, with search and location behind “Search & filters.” Desktop artwork moves up to 36px with scrolling; mobile artwork stays static. Reduced-motion preferences disable parallax and haptics. Deliberate taps request a 10ms vibration on touch devices that support `navigator.vibrate`; iPhone Safari does not support this API, so controls retain visual pressed feedback there. Physical vibration requires verification on a supported device.

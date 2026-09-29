@@ -52,3 +52,53 @@
 
 .event[data-event]{cursor:pointer}.event[data-event] .tickets,.event[data-event] .save{cursor:pointer}
 .event[data-event]:hover .event-title{text-decoration:underline;text-decoration-color:var(--coral);text-underline-offset:4px}
+
+/* Keep the mobile introduction compact so the lineup starts on the first screen. */
+.hero-mobile-description,.search-toggle,.lineup-mobile-title{display:none}
+.hero-art img{transform:translate3d(0,var(--hero-offset,0px),0)}
+@media(max-width:760px){
+  header{height:66px}
+  .hero{display:block;min-height:180px;padding:24px 0 20px;overflow:hidden;isolation:isolate}
+  .hero-copy{position:relative;z-index:2;pointer-events:none}
+  .hero h1{font-size:clamp(30px,8.7vw,36px);letter-spacing:-1.5px;line-height:1.08;margin:0 0 14px;white-space:normal;max-width:none}
+  .hero h1 br{display:none}
+  .hero-description,.hero-copy>.text-link{display:none}
+  .hero .hero-mobile-description{display:block;font-size:16px;line-height:1.5;max-width:225px;margin:0}
+  .hero-art{position:absolute;z-index:0;inset:0 -65px 0 auto;width:240px;height:100%;margin:0;pointer-events:none}
+  .hero-art img{width:260px;height:230px;top:-18px;left:0;object-fit:contain;transform:none;opacity:.72}
+  .hero:after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#fff 22%,#ffffffed 45%,#ffffff55 73%,#ffffff18)}
+  .section-heading{margin:20px 0 14px}
+  .section-heading h2{font-size:28px;max-width:none;letter-spacing:-1px}
+  .lineup-desktop-title{display:none}
+  .lineup-mobile-title{display:inline}
+  .edition{display:none}
+  .categories{gap:8px 20px;margin-bottom:6px}
+  .categories button{font-size:16px;min-height:44px}
+  .categories .free-filter{font-size:14px;padding:6px 12px}
+  .search-toggle{display:flex;align-items:center;justify-content:space-between;width:100%;min-height:44px;padding:0;border-bottom:1px solid var(--line);font:14px var(--sans);text-align:left}
+  .search-toggle span{font-size:22px}
+  .search-tools .search-location{display:none;padding-top:12px}
+  .search-tools.is-open .search-location{display:grid}
+  .result-meta{margin-top:14px}
+  .event{padding:16px 0}
+  button:active,.tickets:active{background-color:#fff3f3}
+  .analytics-consent{padding:12px}
+  .analytics-consent p{font-size:11px;line-height:1.4}
+  .analytics-actions{margin-top:8px}
+}
+@media(prefers-reduced-motion:reduce){.hero-art img{transform:none}}
+@media(max-width:760px){
+  /* The category line already carries the subtitle; prioritize venue and tickets. */
+  .event-description{display:none}
+}
+@media(max-width:380px){
+  .categories{gap:8px 12px}
+  .categories button{font-size:14px}
+  .categories .free-filter{font-size:13px;padding:6px 10px}
+}
+@media(max-width:380px){
+  header{height:60px}
+  .hero{min-height:160px;padding:18px 0}
+  .section-heading{margin:16px 0 12px}
+  .event h3{font-size:20px}
+}

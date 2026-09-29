@@ -914,3 +914,53 @@ document.addEventListener('click', event => {
   const filter = event.target.closest('[data-kind]');
   if (filter) window.siteAnalytics?.track('event_filter', {filter_name:filter.dataset.kind});
 });
+
+
+// Native controls stay available on desktop; mobile can expand them on demand.
+const searchToggle = $('#search-toggle');
+searchToggle.addEventListener('click', () => {
+  const expanded = searchToggle.getAttribute('aria-expanded') !== 'true';
+  searchToggle.setAttribute('aria-expanded', String(expanded));
+  searchToggle.closest('.search-tools').classList.toggle('is-open', expanded);
+  searchToggle.querySelector('span').textContent = expanded ? '−' : '+';
+});
+
+// Move only the desktop artwork, and stop work once the hero leaves the viewport.
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+const desktopHero = matchMedia('(min-width: 761px)');
+const hero = $('.hero');
+const heroImage = $('.hero-art img');
+let heroVisible = true;
+let heroFrame = 0;
+function updateHeroParallax() {
+  heroFrame = 0;
+  const enabled = desktopHero.matches && !reducedMotion.matches;
+  const offset = enabled ? Math.min(36, Math.max(0, -hero.getBoundingClientRect().top * .08)) : 0;
+  heroImage.style.setProperty('--hero-offset', `${offset}px`);
+}
+function scheduleHeroParallax() {
+  if (!heroFrame) heroFrame = requestAnimationFrame(updateHeroParallax);
+}
+window.addEventListener('scroll', () => {
+  if (heroVisible && desktopHero.matches && !reducedMotion.matches) scheduleHeroParallax();
+}, {passive: true});
+window.addEventListener('resize', scheduleHeroParallax);
+reducedMotion.addEventListener('change', scheduleHeroParallax);
+desktopHero.addEventListener('change', scheduleHeroParallax);
+if ('IntersectionObserver' in window) {
+  new IntersectionObserver(([entry]) => {
+    heroVisible = entry.isIntersecting;
+    if (heroVisible) scheduleHeroParallax();
+  }).observe(hero);
+}
+scheduleHeroParallax();
+
+// A brief pulse for deliberate mobile actions, where vibration is supported.
+function mobileHaptic(event) {
+  if (!event.isTrusted || reducedMotion.matches || !matchMedia('(pointer: coarse)').matches || typeof navigator.vibrate !== 'function') return;
+  const control = event.target.closest('button, .tickets, .short-event a, .detail-actions a, .search-toggle, .event[data-event], .listing-updates summary');
+  if (!control || control.disabled) return;
+  try { navigator.vibrate(10); } catch { /* Feedback must never interrupt an action. */ }
+}
+document.addEventListener('click', mobileHaptic, {capture: true});
+$('#location').addEventListener('change', mobileHaptic);
