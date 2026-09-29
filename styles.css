@@ -10,7 +10,7 @@
 /* SVG prevents iOS from replacing brand marks and arrows with emoji. */
 .external-arrow{width:14px;height:14px;display:inline-block;vertical-align:-2px;flex-shrink:0}
 @media(max-width:760px){
-  
+
   .search-location{grid-template-columns:1fr;gap:10px}
   .search input{font-size:14px}
   .location select{flex:1;max-width:none;font-size:14px}
