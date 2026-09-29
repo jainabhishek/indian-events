@@ -1,45 +1,11 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101527">
-  <meta name="description" content="A curated guide to Indian and Indian-origin music and comedy around Chicago.">
-  <title>Desi on Stage · Chicago</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Desi on Stage home"><span class="brand-mark" aria-hidden="true"></span><span>DESI <em>ON</em> STAGE<span class="brand-city">CHICAGO</span></span></a>
-    <nav aria-label="Main navigation"><a href="#events">Events</a><a href="#about">About</a><a class="nav-cta" href="#submit">Suggest an event <span aria-hidden="true">→</span></a></nav>
-  </header>
-  <main id="top">
-    <div class="stage">
-      <section class="hero" aria-labelledby="hero-title">
-        <p class="eyebrow">THE CHICAGO AREA · LIVE & LOCAL</p>
-        <h1 id="hero-title">The city is <i>our stage.</i></h1>
-        <p class="hero-copy">Indian music and comedy, happening around Chicago.</p>
-      </section>
-      <section class="events-section" id="events">
-        <div class="section-heading"><div><p class="eyebrow">THE LINEUP</p><h2>Coming up <i>around town.</i></h2></div><p>All times Central. Check the organizer’s page before you go; details can change.</p></div>
-        <div class="filters" role="group" aria-label="Filter events"><button class="filter active" data-filter="all" aria-pressed="true">All events</button><button class="filter" data-filter="music" aria-pressed="false">Music</button><button class="filter" data-filter="comedy" aria-pressed="false">Comedy</button><button class="filter" data-filter="free" aria-pressed="false">Free</button></div>
-        <div id="event-list" class="event-list" aria-live="polite"></div>
-        <p class="checked">Listings checked September 28, 2026. This is a curated guide, not a live ticket inventory.</p>
-      </section>
-    </div>
-    <section class="intro-bar" aria-label="About this calendar"><span>THE NEXT GOOD NIGHT OUT STARTS HERE.</span><p>From intimate stages to big arena nights, discover the artists bringing South Asian sounds and stories to our corner of the Midwest.</p></section>
-    <section class="about-section" id="about"><div><p class="eyebrow">A LITTLE ABOUT THIS GUIDE</p><h2>More than a<br><i>night out.</i></h2></div><div><p>There’s always something happening in our community. Desi on Stage gathers Indian and Indian-origin performers across Chicago and nearby cities so you can find your next favorite show in one place.</p><p>Every listing links to an organizer, venue, or ticket page. We review changes and remove events that can no longer be confirmed.</p></div></section>
-    <section class="submit-section" id="submit"><span class="star" aria-hidden="true"></span><div><p class="eyebrow dark">HELP US KEEP THE BEAT</p><h2>Know a show we missed?</h2><p>Send the event name, date, venue, and an official link.</p></div><a href="https://github.com/jainabhishek/indian-events/issues/new?title=Event%20suggestion" target="_blank" rel="noopener noreferrer">Suggest an event <span aria-hidden="true">→</span></a></section>
-  </main>
-  <footer><span class="footer-brand"><span class="footer-mark" aria-hidden="true"></span> DESI ON STAGE · CHICAGO</span><span>Made for the curious and the community. © 2026</span><button class="privacy-settings" type="button" id="privacy-settings">Analytics choice</button><a href="#top">Back to top ↑</a></footer>
-  <aside class="analytics-consent" id="analytics-consent" aria-label="Analytics choice" hidden>
-    <p>May we use Google Analytics to learn which events people explore? It measures visits, filters, and ticket-link clicks. We don’t send signup email addresses.</p>
-    <div class="analytics-actions"><button type="button" id="analytics-decline">No thanks</button><button type="button" id="analytics-allow">Allow analytics</button></div>
-  </aside>
-  <script src="analytics.js" defer></script>
-  <script src="script.js" defer></script>
-</body>
-</html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#071830"><meta name="description" content="Discover Indian music and stand-up comedy across Chicago and the suburbs. Explore upcoming shows, save your favorites, and find organizer tickets."><title>Desi Chicago — Your city. Your scene.</title><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"></head>
+<body><a class="skip" href="#lineup">Skip to events</a><div class="shell">
+<header><a class="brand" href="./" aria-label="Desi Chicago home">Desi Chicago <svg class="skyline" viewBox="0 0 30 35" aria-hidden="true"><path d="M2 35V18h5v17M11 35V9h6v26M14 9V0M22 35V14h6v21M25 14V6"/></svg><span class="spark" aria-hidden="true">✳</span></a><nav aria-label="Main navigation"><a class="nav-active" href="#lineup">Explore</a><button id="shortlist-open">The shortlist <span id="saved-count">0</span></button></nav></header>
+<main><section class="hero" aria-labelledby="hero-title"><div class="hero-copy"><h1 id="hero-title">Your city.<br>Your scene.</h1><p>Indian music. Big laughs. Unforgettable nights.<br class="desktop-break"> Find your next live experience in Chicagoland.</p><a class="text-link" href="#lineup">Explore the lineup <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg></a></div><div class="hero-art"><img src="assets/sound-sculpture-patterned.webp" alt="Chrome microphone and blue vinyl record wrapped in a flowing coral ribbon with ivory paisley and floral patterns" fetchpriority="high"></div></section>
+<section id="lineup" aria-labelledby="lineup-title"><div class="section-heading"><h2 id="lineup-title">Find your next night out.</h2><span class="edition">CHICAGOLAND<br>FALL / 2026</span></div><div class="filters"><div class="categories" role="group" aria-label="Event category"><button class="selected" data-kind="all" aria-pressed="true">All nights</button><button data-kind="music" aria-pressed="false">Music</button><button data-kind="comedy" aria-pressed="false">Comedy</button></div><div class="search-location"><label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/></svg><input id="search" type="search" aria-label="Search artists, shows or venues" placeholder="Search artists, shows, or venues"></label><label class="location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-7 7-12A7 7 0 0 0 5 9c0 5 7 12 7 12Z"/><circle cx="12" cy="9" r="2"/></svg><select id="location" aria-label="Filter by location"><option value="all">Chicagoland</option value="Chicago">Chicago</option><option value="Naperville">Naperville</option><option value="suburbs">Nearby suburbs</option></select></label></div></div><div class="result-meta"><span id="result-count" role="status"></span><button id="clear-filters" hidden>Reset filters</button></div><div id="event-list"></div><div class="empty" id="empty" hidden><h3>No nights match. Yet.</h3><p>Try a different artist, location, or category.</p><button class="text-link" id="empty-reset">Explore all events <span aria-hidden="true">↗</span></button></div><div class="source-note"><span class="source-dot"></span><p>Checked against organizer listings on September 29, 2026. All times are local.<br>Plans change. Confirm the latest details and availability with the ticket provider.</p></div></section></main>
+<footer><a class="brand small-brand" href="./">Desi Chicago <span class="spark" aria-hidden="true">✳</span></a><p>A little closer to home. A lot closer to the stage.</p><button id="privacy-settings">Analytics choice</button><button id="about-open">About this guide <span aria-hidden="true">↗</span></button></footer></div>
+<dialog id="shortlist-dialog" aria-labelledby="shortlist-title"><div class="dialog-head"><h2 id="shortlist-title">Your shortlist.</h2><button class="close" data-close aria-label="Close shortlist">×</button></div><p class="dialog-intro">The nights you don’t want to miss. Saved on this device.</p><div id="shortlist-list"></div></dialog>
+<dialog id="detail-dialog" aria-labelledby="detail-title"><div class="dialog-head"><span class="detail-kicker" id="detail-category"></span><button class="close" data-close aria-label="Close event details">×</button></div><h2 id="detail-title"></h2><div id="detail-content"></div></dialog>
+<dialog id="about-dialog" aria-labelledby="about-title"><div class="dialog-head"><h2 id="about-title">Made for our scene.</h2><button class="close" data-close aria-label="Close about this guide">×</button></div><p>Desi Chicago is an independent guide to Indian music and comedy in Chicagoland. This launch edition brings together five upcoming shows with direct links to organizer and ticket listings.</p><p>We don’t sell tickets or collect payments. Ticket prices, fees, age policies, and availability are set by the provider. Listings are curated manually and are not a live feed.</p><p>Your shortlist stays in your browser. No account or email required. Optional analytics loads only with your permission; change your choice in the footer.</p></dialog>
+<aside class="analytics-consent" id="analytics-consent" aria-label="Analytics choice" hidden><p>Help improve this guide with optional analytics. Nothing loads until you allow it. Your shortlist stays on this device.</p><div class="analytics-actions"><button type="button" id="analytics-decline">No thanks</button><button type="button" id="analytics-allow">Allow analytics</button></div></aside><script src="analytics.js" defer></script><div class="toast" id="toast" role="status"></div><script src="script.js"></script></body></html>
