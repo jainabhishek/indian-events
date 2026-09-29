@@ -11,7 +11,8 @@ a { color: inherit; text-decoration: none; }
 button { font: inherit; }
 .site-header { height: 72px; padding: 0 5.5%; display: flex; align-items: center; justify-content: space-between; background: var(--navy); color: white; }
 .brand { display: flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 700; line-height: .9; letter-spacing: .07em; }
-.brand-mark { font-size: 42px; font-weight: 400; color: var(--coral); }
+.brand-mark, .submit-section .star, .footer-mark { display: inline-block; flex: none; background: url('spark.svg') center / contain no-repeat; }
+.brand-mark { width: 33px; height: 33px; }
 .brand em { color: var(--coral); font-style: normal; }
 .brand-city { display: block; margin-top: 8px; color: #b9bac6; font-size: 8px; letter-spacing: .36em; }
 .site-header nav { display: flex; align-items: center; gap: 36px; font-size: 13px; font-weight: 600; }
@@ -36,7 +37,7 @@ button { font: inherit; }
 .event-card { position: relative; display: grid; grid-template-columns: 82px minmax(0,1fr) auto; align-items: center; gap: 22px; min-height: 109px; padding: 13px 18px; border: 1px solid rgba(255,255,255,.26); background: rgba(9,16,37,.86); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); transition: transform .2s ease, border-color .2s ease; }
 .event-card:hover { transform: translateY(-2px); border-color: rgba(244,131,120,.8); }
 .event-card.featured { min-height: 168px; padding: 24px 27px; border: 1px solid rgba(255,176,166,.86); background: linear-gradient(110deg, rgba(85,27,66,.97), rgba(30,20,55,.94) 55%, rgba(12,21,46,.89)); box-shadow: 0 20px 65px rgba(3,7,24,.3), inset 5px 0 0 var(--coral); }
-.event-card.featured::after { content: '✳'; position: absolute; right: 22%; top: -53px; color: rgba(244,131,120,.12); font-size: 210px; line-height: 1; pointer-events: none; }
+.event-card.featured::after { content: ''; position: absolute; right: 22%; top: -27px; width: 160px; height: 160px; background: url('spark.svg') center / contain no-repeat; opacity: .12; pointer-events: none; }
 .featured-label { display: block; width: fit-content; margin-bottom: 11px; padding: 5px 9px; background: var(--coral); color: var(--navy); font-size: 10px; font-weight: 800; letter-spacing: .15em; }
 .featured-label span { margin-left: 12px; }
 .featured .date-box { min-height: 105px; border: 1px solid var(--coral); background: rgba(244,131,120,.16); }
@@ -62,17 +63,19 @@ button { font: inherit; }
 .about-section h2 { font-size: clamp(60px, 6vw, 90px); }
 .about-section > div:last-child { max-width: 510px; color: #d4d4dd; font-size: 16px; line-height: 1.85; }
 .submit-section { display: flex; align-items: center; gap: 28px; padding: 58px 5.5%; }
-.submit-section .star { color: var(--coral); font-size: 80px; }
+.submit-section .star { width: 65px; height: 65px; }
 .eyebrow.dark { color: #a54e51; }
 .submit-section h2 { font-size: 42px; }
 .submit-section p:last-child { color: #6e7180; font-size: 14px; }
 .submit-section a { margin-left: auto; padding: 10px 0; border-bottom: 2px solid var(--coral); white-space: nowrap; font-size: 13px; font-weight: 700; }
 footer { display: flex; justify-content: space-between; gap: 20px; padding: 28px 5.5%; background: #e9e5dd; color: #646875; font-size: 11px; }
 footer span:first-child { color: var(--ink); font-weight: 700; }
+.footer-brand { display: inline-flex; align-items: center; gap: 5px; }
+.footer-mark { width: 15px; height: 15px; }
 @media (max-width: 720px) {
   .site-header { height: 68px; padding: 0 5%; }
   .brand { font-size: 15px; }
-  .brand-mark { font-size: 35px; }
+  .brand-mark { width: 28px; height: 28px; }
   .site-header nav { gap: 12px; }
   .site-header nav a:not(.nav-cta) { display: none; }
   .nav-cta { padding: 9px; font-size: 11px; }
@@ -88,7 +91,7 @@ footer span:first-child { color: var(--ink); font-weight: 700; }
   .filter { padding: 8px 13px; font-size: 11px; }
   .event-card { grid-template-columns: 62px minmax(0,1fr); gap: 11px; padding: 12px; }
   .event-card.featured { min-height: 190px; padding: 15px 13px; }
-  .event-card.featured::after { right: -20px; top: -25px; font-size: 145px; }
+  .event-card.featured::after { right: -20px; top: -20px; width: 120px; height: 120px; }
   .featured .date-box { min-height: 78px; }
   .featured .date-box strong { font-size: 35px; }
   .featured h3 { font-size: 23px; }
@@ -102,7 +105,7 @@ footer span:first-child { color: var(--ink); font-weight: 700; }
   .intro-bar p { margin-top: 12px; }
   .about-section > div:last-child { margin-top: 30px; }
   .submit-section { flex-wrap: wrap; padding: 50px 5%; }
-  .submit-section .star { font-size: 48px; }
+  .submit-section .star { width: 46px; height: 46px; }
   .submit-section a { margin-left: 76px; }
   footer { flex-wrap: wrap; }
 }
