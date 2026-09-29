@@ -70,6 +70,14 @@ button { font: inherit; }
 .submit-section a { margin-left: auto; padding: 10px 0; border-bottom: 2px solid var(--coral); white-space: nowrap; font-size: 13px; font-weight: 700; }
 footer { display: flex; justify-content: space-between; gap: 20px; padding: 28px 5.5%; background: #e9e5dd; color: #646875; font-size: 11px; }
 footer span:first-child { color: var(--ink); font-weight: 700; }
+.privacy-settings { padding: 0; border: 0; background: none; color: inherit; cursor: pointer; font-size: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.analytics-consent { position: fixed; z-index: 10; right: 18px; bottom: 18px; display: flex; align-items: center; gap: 22px; max-width: min(720px, calc(100% - 36px)); padding: 15px 18px; border: 1px solid #d9a19f; background: #f6f2ec; color: var(--ink); box-shadow: 0 12px 35px rgba(3, 7, 24, .32); }
+.analytics-consent[hidden] { display: none; }
+.analytics-consent p { margin: 0; font-size: 12px; line-height: 1.5; }
+.analytics-actions { display: flex; flex: none; gap: 8px; }
+.analytics-actions button { padding: 9px 11px; border: 1px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; white-space: nowrap; font-size: 11px; font-weight: 700; }
+.analytics-actions button:last-child { border-color: var(--coral); background: var(--coral); }
+.analytics-actions button:hover, .analytics-actions button:focus-visible, .privacy-settings:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 .footer-brand { display: inline-flex; align-items: center; gap: 5px; }
 .footer-mark { width: 15px; height: 15px; }
 @media (max-width: 720px) {
@@ -108,5 +116,7 @@ footer span:first-child { color: var(--ink); font-weight: 700; }
   .submit-section .star { width: 46px; height: 46px; }
   .submit-section a { margin-left: 76px; }
   footer { flex-wrap: wrap; }
+  .analytics-consent { right: 10px; bottom: 10px; display: block; max-width: calc(100% - 20px); padding: 11px 13px; }
+  .analytics-actions { justify-content: flex-end; margin-top: 9px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .event-card { transition: none; } }
