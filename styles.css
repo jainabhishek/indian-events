@@ -43,3 +43,7 @@
 .brand .charkha{width:40px;height:30px;stroke-width:2;stroke-linecap:round}.small-brand .skyline{width:19px;height:23px}.small-brand .charkha{width:30px;height:23px}
 @media(max-width:760px){header .brand{font-size:25px;gap:5px}header .brand .skyline{width:22px;height:26px}header .brand .charkha{width:32px;height:26px}header nav{font-size:12px}.small-brand{font-size:21px;gap:5px}}
 @media(max-width:380px){header{gap:8px}header .brand{font-size:21px;letter-spacing:-1px;gap:4px}header .brand .skyline{width:18px;height:23px}header .brand .charkha{width:27px;height:23px}header nav{font-size:11px}#saved-count{width:18px;height:18px;margin-left:2px}.small-brand{font-size:20px;gap:4px}}
+
+.listing-updates{margin-top:28px;font-size:14px;line-height:1.6;color:var(--ink)}
+.listing-updates summary{cursor:pointer;font-weight:600;padding:12px 0}
+.listing-updates p{max-width:760px;margin:0 0 16px}
