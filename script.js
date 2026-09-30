@@ -294,7 +294,11 @@ const events=[
     "address": "Whispers at Oak Street Beach, Chicago, IL",
     "url": "https://events.sulekha.com/bollywood-on-the-beach-oct-10th-oak-st-beach_event-in_chicago-il_402001",
     "description": "DJ Miss Bhalla, DJ Capslock & DJ Ujwal performs at Whispers at Oak Street Beach in Chicago.",
-    "note": "21+. Capslock 1–5 PM; Miss Bhalla 5–7 PM; Ujwal 7–9 PM. Check the organizer for weather or schedule changes."
+    "note": "21+. Capslock 1–5 PM; Miss Bhalla 5–7 PM; Ujwal 7–9 PM. Check the organizer for weather or schedule changes.",
+    "image": "assets/events/dj-miss-bhalla.webp",
+    "imageSource": "https://ugc.production.linktr.ee/PAwPsqsKQNe1Zmt0uKSM_IMG_8322.JPG",
+    "imageSourcePage": "https://linktr.ee/djmissbhalla",
+    "imageAlt": "DJ Miss Bhalla performing at the DJ decks"
   },
   {
     "id": "mehul",
@@ -400,7 +404,11 @@ const events=[
     "address": "Athenaeum Center — Historic Main Stage, Chicago, IL",
     "url": "https://www.eventticketscenter.com/ravi-gupta-chicago-tickets/1482361/e",
     "description": "Ravi Gupta performs at Athenaeum Center — Historic Main Stage in Chicago.",
-    "note": "Listed by a secondary ticket marketplace. A first-party venue/promoter listing has not been verified; confirm with Athenaeum before purchasing."
+    "note": "Listed by a secondary ticket marketplace. A first-party venue/promoter listing has not been verified; confirm with Athenaeum before purchasing.",
+    "image": "assets/events/ravi-gupta.webp",
+    "imageSource": "https://ugc.production.linktr.ee/iInmgEwfS2yQc7Uhk7KJ_LZbhSs9X7TW066Zw",
+    "imageSourcePage": "https://linktr.ee/raviguptacomedy",
+    "imageAlt": "Ravi Gupta holding a microphone"
   },
   {
     "id": "gurleen",
@@ -984,13 +992,17 @@ const events=[
     "url": "https://www.ticketmaster.com/nimesh-patel-joliet-illinois-11-14-2026/event/070064FDA476329A",
     "description": "Indian-American comedian and writer Nimesh Patel performs at Hollywood Casino Joliet.",
     "note": "Official Ticketmaster event and venue listings confirm November 14 at 8:00 PM. Confirm entry requirements and current ticket availability with the provider.",
-    "verifiedOn": "2026-09-29"
+    "verifiedOn": "2026-09-29",
+    "image": "assets/events/nimesh-patel.webp",
+    "imageSource": "https://s1.ticketm.net/dam/a/581/c62603f9-c6ff-41bb-8794-fb0338525581_RETINA_PORTRAIT_3_2.jpg",
+    "imageSourcePage": "https://www.ticketmaster.com/nimesh-patel-joliet-illinois-11-14-2026/event/070064FDA476329A",
+    "imageAlt": "Nimesh Patel promotional photograph"
   }
 ].sort((a,b)=>a.date.localeCompare(b.date));
 const externalArrow='<svg class="external-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg>';const $=s=>document.querySelector(s);const arrow='<svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg>';const heart='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg>';let saved=new Set();try{const v=JSON.parse(localStorage.getItem('desi-shortlist')||'[]');if(Array.isArray(v))saved=new Set(v.filter(id=>events.some(e=>e.id===id)))}catch{}let kind='all';let toastTimer;let restoreFocus;
 const formatDate=(date,options)=>new Intl.DateTimeFormat('en-US',{...options,timeZone:'America/Chicago'}).format(new Date(`${date}T12:00:00-05:00`));
 function saveButton(e){return `<button class="save" data-save="${e.id}" aria-label="${saved.has(e.id)?'Remove':'Save'} ${e.name} ${saved.has(e.id)?'from':'to'} shortlist" aria-pressed="${saved.has(e.id)}">${heart}</button>`}
-function render(){const query=$('#search').value.trim().toLowerCase();const location=$('#location').value;const today=new Intl.DateTimeFormat('en-CA',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());const rows=events.filter(e=>!e.status&&e.date>=today&&(kind==='all'||e.kind===kind||(kind==='free'&&e.free===true))&&(location==='all'||(location==='suburbs'?e.city!=='Chicago':e.city===location))&&`${e.name} ${e.subtitle} ${e.venue} ${e.city} ${e.genre}`.toLowerCase().includes(query));$('#event-list').innerHTML=rows.map(e=>`<article class="event" data-event="${e.id}"><time class="date" datetime="${e.date}"><span>${formatDate(e.date,{month:'short'}).toUpperCase()}</span><strong>${Number(e.date.slice(-2))}</strong><small>${formatDate(e.date,{weekday:'short'}).toUpperCase()}</small></time>${e.image?`<img class="poster" src="${e.image}" alt="${e.name} event artwork" loading="lazy">`:`<div class="poster-fallback" aria-hidden="true">${e.name.split(' ').slice(0,2).map(w=>w[0]).join('')}</div>`}<div class="event-info"><div class="event-kicker">${e.kind} / ${e.genre}</div><h3><button class="event-title" data-detail="${e.id}">${e.name}</button></h3><p class="event-description">${e.subtitle}</p><p class="event-meta"><b>${e.venue}</b> · ${e.city}<br>${e.time}${e.free?' · Free admission':''}</p></div><a class="tickets" href="${e.url}" target="_blank" rel="noopener noreferrer" aria-label="${e.free?'View venue details':'Get tickets'} for ${e.name} (opens in a new tab)"><span>${e.free?'Venue details':'Get tickets'}</span>${arrow}</a>${saveButton(e)}</article>`).join('');$('#empty').hidden=rows.length>0;$('#result-count').textContent=`${rows.length} upcoming ${rows.length===1?'night':'nights'} · Fall 2026`;$('#clear-filters').hidden=kind==='all'&&!query&&location==='all';document.querySelectorAll('.poster').forEach(img=>img.addEventListener('error',()=>{const div=document.createElement('div');div.className='poster-fallback';div.setAttribute('aria-hidden','true');div.textContent=img.alt.split(' ').slice(0,2).map(w=>w[0]).join('');img.replaceWith(div)}));updateCount()}
+function render(){const query=$('#search').value.trim().toLowerCase();const location=$('#location').value;const today=new Intl.DateTimeFormat('en-CA',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());const rows=events.filter(e=>!e.status&&e.date>=today&&(kind==='all'||e.kind===kind||(kind==='free'&&e.free===true))&&(location==='all'||(location==='suburbs'?e.city!=='Chicago':e.city===location))&&`${e.name} ${e.subtitle} ${e.venue} ${e.city} ${e.genre}`.toLowerCase().includes(query));$('#event-list').innerHTML=rows.map(e=>`<article class="event" data-event="${e.id}"><time class="date" datetime="${e.date}"><span>${formatDate(e.date,{month:'short'}).toUpperCase()}</span><strong>${Number(e.date.slice(-2))}</strong><small>${formatDate(e.date,{weekday:'short'}).toUpperCase()}</small></time>${e.image?`<img class="poster" src="${e.image}" alt="${e.imageAlt||`${e.name} event artwork`}" loading="lazy">`:`<div class="poster-fallback" aria-hidden="true">${e.name.split(' ').slice(0,2).map(w=>w[0]).join('')}</div>`}<div class="event-info"><div class="event-kicker">${e.kind} / ${e.genre}</div><h3><button class="event-title" data-detail="${e.id}">${e.name}</button></h3><p class="event-description">${e.subtitle}</p><p class="event-meta"><b>${e.venue}</b> · ${e.city}<br>${e.time}${e.free?' · Free admission':''}</p></div><a class="tickets" href="${e.url}" target="_blank" rel="noopener noreferrer" aria-label="${e.free?'View venue details':'Get tickets'} for ${e.name} (opens in a new tab)"><span>${e.free?'Venue details':'Get tickets'}</span>${arrow}</a>${saveButton(e)}</article>`).join('');$('#empty').hidden=rows.length>0;$('#result-count').textContent=`${rows.length} upcoming ${rows.length===1?'night':'nights'} · Fall 2026`;$('#clear-filters').hidden=kind==='all'&&!query&&location==='all';document.querySelectorAll('.poster').forEach(img=>img.addEventListener('error',()=>{const div=document.createElement('div');div.className='poster-fallback';div.setAttribute('aria-hidden','true');div.textContent=img.alt.split(' ').slice(0,2).map(w=>w[0]).join('');img.replaceWith(div)}));updateCount()}
 function updateCount(){$('#saved-count').textContent=saved.size}
 function notify(message){$('#toast').textContent=message;$('#toast').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('visible'),2600)}
 function toggleSave(id){const e=events.find(e=>e.id===id);if(!e)return;const removing=saved.has(id);removing?saved.delete(id):saved.add(id);let persisted=true;try{localStorage.setItem('desi-shortlist',JSON.stringify([...saved]))}catch{persisted=false}document.querySelectorAll(`[data-save="${id}"]`).forEach(b=>{b.setAttribute('aria-pressed',saved.has(id));b.setAttribute('aria-label',`${saved.has(id)?'Remove':'Save'} ${e.name} ${saved.has(id)?'from':'to'} shortlist`)});updateCount();if($('#shortlist-dialog').open)renderShortlist();notify(`${e.name} ${removing?'removed from':'added to'} your shortlist.${persisted?'':' Storage unavailable; saved for this visit.'}`)}
