@@ -104,3 +104,8 @@
 }
 
 .analytics-info{display:inline-block;margin-top:7px;font:11px var(--sans);text-decoration:underline}.analytics-consent [hidden]{display:none!important}
+
+/* Keep contact accessible alongside the footer controls on phones. */
+footer .contact-link{font:12px var(--sans);min-height:44px;display:inline-flex;align-items:center}
+footer .contact-link:hover{text-decoration:underline}
+@media(max-width:760px){footer .contact-link{grid-column:2;grid-row:2;justify-self:end}}
