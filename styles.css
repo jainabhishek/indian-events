@@ -5,7 +5,7 @@
 @media(max-width:380px){.shell{padding:0 17px}.brand{font-size:24px}.skyline{display:none}nav{font-size:12px}.hero h1{font-size:16vw;letter-spacing:-2.5px}.search-location{grid-template-columns:minmax(0,1fr) 124px}.event{grid-template-columns:38px 60px minmax(0,1fr) 27px;gap:9px}.poster,.poster-fallback{width:60px;height:80px}.event h3{font-size:20px}.section-heading h2{font-size:32px}.edition{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 
-.analytics-consent{position:fixed;z-index:15;bottom:18px;right:18px;max-width:590px;background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:0 8px 30px #07183020;padding:20px;display:flex;align-items:center;gap:22px}.analytics-consent p{margin:0;font:12px/1.6 var(--sans)}.analytics-actions{display:flex;gap:12px;flex-shrink:0}.analytics-actions button{font:12px var(--sans);padding:11px 12px;border:1px solid var(--ink);white-space:nowrap}.analytics-actions button:last-child{color:white;background:var(--ink)}@media(max-width:760px){.analytics-consent{left:16px;right:16px;bottom:16px;display:block}.analytics-actions{margin-top:12px;justify-content:flex-end}}
+.analytics-consent{position:fixed;z-index:15;bottom:18px;right:18px;max-width:590px;background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:0 8px 30px #07183020;padding:20px;display:flex;align-items:center;gap:22px}.analytics-consent p{margin:0;font:12px/1.6 var(--sans)}.analytics-actions{display:flex;flex-wrap:wrap;gap:12px;flex-shrink:0}.analytics-actions button{font:12px var(--sans);padding:11px 12px;border:1px solid var(--ink);white-space:nowrap}.analytics-actions #analytics-allow{color:white;background:var(--ink)}@media(max-width:760px){.analytics-consent{left:16px;right:16px;bottom:16px;display:block}.analytics-actions{margin-top:12px;justify-content:flex-end}}
 
 /* SVG prevents iOS from replacing brand marks and arrows with emoji. */
 .external-arrow{width:14px;height:14px;display:inline-block;vertical-align:-2px;flex-shrink:0}
@@ -102,3 +102,5 @@
   .section-heading{margin:16px 0 12px}
   .event h3{font-size:20px}
 }
+
+.analytics-info{display:inline-block;margin-top:7px;font:11px var(--sans);text-decoration:underline}.analytics-consent [hidden]{display:none!important}

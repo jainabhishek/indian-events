@@ -12,7 +12,7 @@ Serve this directory with any static web server. No package installation or buil
 
 ## Publish
 
-Live website: https://events.abhishekja.in/
+Live website: https://desievents.luckbhi.com/
 
 Cloudflare Pages project: `desi-on-stage-chicago`. It uses Direct Upload; pushing source does not deploy it. Copy only `index.html`, `styles.css`, `script.js`, `analytics.js`, and `assets/` into a clean staging directory, then run:
 
@@ -20,11 +20,11 @@ Cloudflare Pages project: `desi-on-stage-chicago`. It uses Direct Upload; pushin
 wrangler pages deploy <staging-directory> --project-name desi-on-stage-chicago --branch main
 ```
 
-The GoDaddy `events` CNAME points to `desi-on-stage-chicago.pages.dev`.
+The Cloudflare-managed `luckbhi.com` zone has a `desievents` CNAME pointing to `desi-on-stage-chicago.pages.dev`. The former custom domain and its GoDaddy DNS record have been removed without a redirect.
 
 ## Analytics and privacy
 
-Existing GA4 stream `G-KMQVM6H2VK` is preserved in `analytics.js`. Google loads only after **Allow analytics**, retaining existing consent choices under the same browser storage key. The footer **Analytics choice** control permits changing consent; revoking reloads the page with Google disabled. Ticket-link and category interactions report public event IDs and category values, never search terms or shortlist contents. The shortlist stays in browser storage; no account, email, or payment information is collected.
+Existing GA4 stream `G-KMQVM6H2VK` is preserved in `analytics.js`. Google loads automatically outside the EEA, UK, and Switzerland for visitors who have not declined and do not signal Global Privacy Control. For the EEA (including separately geolocated territories), UK, Switzerland, or an unknown country, it loads only after **Allow analytics**. The same-origin Cloudflare `/cdn-cgi/trace` endpoint supplies country; its response is not persisted or sent to Google, and a failed/3-second timed-out lookup requires consent. Automatic regional permission lasts only for the current page and is never saved as an explicit grant. Existing granted/denied choices retain their browser storage key. The footer **Analytics choice** control remains available everywhere; opt-out disables collection immediately, clears this stream's host-scoped GA cookies, and reloads if the refusal was saved. With blocked storage, it keeps collection disabled without reloading. GA cookies are scoped to this hostname, and advertising storage, personalization, and Google signals stay disabled. The country rules implement the selected EEA/UK/Switzerland policy; they are not an exhaustive worldwide legal assessment. Ticket-link and category interactions report public event IDs and category values, never search terms or shortlist contents. The shortlist stays in browser storage; no account, email, or payment information is collected.
 
 ## Artwork
 
