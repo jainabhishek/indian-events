@@ -18,3 +18,11 @@ Pending leads: Funkadesi's December 5 anniversary finale has no confirmed venue/
 Validation: JavaScript syntax and whitespace checks; all 54 records have valid dates, required fields, HTTPS links, unique IDs and unique performer/date/time/venue combinations. All 50 prior records compare exactly with production. Browser verification covers category counts, combined search/location/reset, details, persistent shortlist, 390px layout and artwork, plus US/FR/GB/CH/unknown-country analytics, saved refusal, Global Privacy Control, grant and revocation. Expected lineup: 47 upcoming, 33 music, 14 comedy, 9 free.
 
 Publication uses the README's clean allowlist staging and Cloudflare Pages Direct Upload. Successful deployment identity and public-site verification are recorded in automation memory only after completion.
+
+## Direct tracker reconciliation follow-up
+
+The initial run used the repository's earlier tracker reconciliation, without reading the latest ChatGPT conversation directly. After the user asked, read “Track Indian Performers Chicago” (6ab46099-9af0-83ea-bed1-65911bb65aea) directly and compared all available event reports. Its newest event report added Nimesh Patel, which was absent from the initial 50-record baseline.
+
+Added `nimesh-joliet`: stand-up comedy, Saturday November 14, 2026, 8:00 PM Chicago local time, Hollywood Casino Joliet, 1401 Gateway Boulevard, Joliet, IL 60431. [Official Ticketmaster event](https://www.ticketmaster.com/nimesh-patel-joliet-illinois-11-14-2026/event/070064FDA476329A) and [official Ticketmaster venue calendar](https://www.ticketmaster.com/hollywood-casino-joliet-tickets-joliet/venue/57924) confirm the date/time and address. PENN's indexed venue listing agrees; direct HTTP retrieval was blocked, so no event-specific age policy or artwork was assumed. Existing initials fallback is used. All other reported performances and cancellation caveats were already represented.
+
+Final data: 55 valid, unique records; all 54 previously published records retained exactly. Expected lineup: 48 upcoming, 33 music, 15 comedy, 9 free. Browser checks cover the new comedy listing, Joliet/suburb search/filter behavior, detail date/time and ticket link, shortlist persistence, mobile layout, and the existing regional/privacy checks.

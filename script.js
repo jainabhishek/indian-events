@@ -968,6 +968,23 @@ const events=[
     "note": "Free GaanMela performance on the Upstairs stage; the organizer confirms this set time.",
     "image": "assets/events/lehra-lehra.webp",
     "imageSource": "https://www.ochinpakhichicago.org/wp-content/uploads/2026/09/LehraLehra-e1788542340594-1024x693.png"
+  },
+  {
+    "id": "nimesh-joliet",
+    "date": "2026-11-14",
+    "name": "Nimesh Patel",
+    "subtitle": "Stand-up comedy",
+    "kind": "comedy",
+    "genre": "Stand-up comedy",
+    "venue": "Hollywood Casino Joliet",
+    "city": "Joliet",
+    "time": "8:00 PM",
+    "ages": "Confirm event-specific age policy with venue",
+    "address": "1401 Gateway Boulevard, Joliet, IL 60431",
+    "url": "https://www.ticketmaster.com/nimesh-patel-joliet-illinois-11-14-2026/event/070064FDA476329A",
+    "description": "Indian-American comedian and writer Nimesh Patel performs at Hollywood Casino Joliet.",
+    "note": "Official Ticketmaster event and venue listings confirm November 14 at 8:00 PM. Confirm entry requirements and current ticket availability with the provider.",
+    "verifiedOn": "2026-09-29"
   }
 ].sort((a,b)=>a.date.localeCompare(b.date));
 const externalArrow='<svg class="external-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg>';const $=s=>document.querySelector(s);const arrow='<svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg>';const heart='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg>';let saved=new Set();try{const v=JSON.parse(localStorage.getItem('desi-shortlist')||'[]');if(Array.isArray(v))saved=new Set(v.filter(id=>events.some(e=>e.id===id)))}catch{}let kind='all';let toastTimer;let restoreFocus;
