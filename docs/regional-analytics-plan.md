@@ -13,8 +13,8 @@ The policy is the selected EEA/UK/Switzerland policy, not an exhaustive worldwid
 - [x] Scope GA cookies to this hostname, stop analytics and clear this stream's host cookies on opt-out.
 - [x] Update consent/settings disclosure to describe actual behavior and identify Google.
 - [x] Update publication instructions and automation wording so later content updates preserve regional behavior.
-- [ ] Verify the country/consent/privacy matrix, rendered UI, and production publication.
-- [ ] Commit, push, attach a PR, and report deployed evidence.
+- [x] Verify the country/consent/privacy matrix, rendered UI, and production publication.
+- [x] Commit, push, attach a PR, and report deployed evidence.
 
 ## Verification
 
@@ -26,4 +26,4 @@ Google's EU User Consent Policy covers EEA, UK, and Switzerland and requires dis
 
 ## Completion
 
-Implemented and locally verified. Twelve external Node VM scenario groups passed, including every protected country/territory, privacy signals, saved choices, storage failure, lookup timeout, and choice/lookup races. Chrome verified automatic US loading, European prompt-before-load, grant, persisted opt-out, and GPC. Desktop and 390x844 mobile rendered without overflow or console warnings/errors. Local tests used a stub Google script to avoid sending test visits. Initial production verification found a returning Chrome tab still executing the cached pre-change analytics script. Added content-versioned analytics and stylesheet URLs to force refresh on this rollout. Final production verification and PR are pending.
+Implemented and locally verified. Twelve external Node VM scenario groups passed, including every protected country/territory, privacy signals, saved choices, storage failure, lookup timeout, and choice/lookup races. Chrome verified automatic US loading, European prompt-before-load, grant, persisted opt-out, and GPC. Desktop and 390x844 mobile rendered without overflow or console warnings/errors. Local tests used a stub Google script to avoid sending test visits. Initial production verification found a returning Chrome tab still executing the cached pre-change analytics script. Added content-versioned analytics and stylesheet URLs to force refresh on this rollout. The final Cloudflare deployment is https://a5be5598.desi-on-stage-chicago.pages.dev/ . Production at https://desievents.luckbhi.com/ loaded the versioned analytics script, received a US country result, hid the prompt, and loaded Google automatically. Google collection returned HTTP 204; an event_filter request targeted G-KMQVM6H2VK. No relevant console errors or warnings were observed. The content automation was updated and verified to preserve the selected regional behavior; its schedule/model/project stayed unchanged. Source is committed and pushed; the PR records this scoped rollout. GA4 Realtime reporting and its administrative stream URL were not inspected. IP geolocation is approximate and this region policy is not a worldwide legal audit.
