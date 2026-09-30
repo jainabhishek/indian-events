@@ -1,0 +1,11 @@
+{
+  "name": "desi-chicago-regression-checks",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/analytics.test.mjs",
+    "check": "node --check script.js && node --check analytics.js"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0"
+  }
+}
