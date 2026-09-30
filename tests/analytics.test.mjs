@@ -159,7 +159,7 @@ describe('local outbound analytics', () => {
     await page.locator('#detail-content a').filter({ hasText: 'Directions' }).click();
     await page.getByRole('button', { name: 'Close event details', exact: true }).click();
     await page.locator('#about-open').click();
-    await page.locator('#about-dialog a').click();
+    await page.getByRole('link', { name: 'how Google uses data', exact: true }).click();
     await page.getByRole('button', { name: 'Close about this guide', exact: true }).click();
     // Reuse a real shared href so a URL-based fallback would falsely attribute it.
     await page.evaluate(() => {
