@@ -889,6 +889,102 @@ const events=[
     "note": "Separate ticket required for each performance. City Winery: 1200 W Randolph Street.",
     "image": "assets/events/mohini-early.webp",
     "imageSource": "https://s3.eu-central-1.amazonaws.com/yt-s3/b988cd53-f47c-4786-8929-70e4acaa2944.jpg"
+  },
+  {
+    "id": "butter-chicken-red-line",
+    "date": "2026-10-16",
+    "name": "Butter Chicken Brass Band & Mandala Arts",
+    "subtitle": "Red Line Jazz Festival · South Asian brass / jazz",
+    "kind": "music",
+    "genre": "South Asian brass / jazz",
+    "venue": "Harris Theater",
+    "city": "Chicago",
+    "time": "7:30 PM",
+    "ages": "Confirm age policy with venue",
+    "address": "205 E Randolph Street, Chicago, IL 60601",
+    "url": "https://www.harristheaterchicago.org/performance/red-line-jazz-festival",
+    "description": "Butter Chicken Brass Band joins Mandala Arts’ Red Line Jazz Festival, curated by Fareed Haque.",
+    "note": "Official venue and organizer confirm the date and ticket link. Approximate runtime: two hours including intermission.",
+    "image": "assets/events/red-line-jazz.webp",
+    "imageSource": "https://www.harristheaterchicago.org/sites/default/files/styles/2000x1200/public/2026-06/RDLJ26_2000x1200_event%20image.jpg.webp?h=f1946b31&itok=1eYDKhuH",
+    "verifiedOn": "2026-09-29"
+  },
+  {
+    "date": "2026-11-07",
+    "kind": "music",
+    "venue": "United Church of Rogers Park",
+    "city": "Chicago",
+    "ages": "Confirm age policy with organizer",
+    "address": "1545 W Morse Avenue, Chicago, IL 60626",
+    "url": "https://www.ochinpakhichicago.org/gaanmela/",
+    "free": true,
+    "verifiedOn": "2026-09-29",
+    "id": "arun-qais-gaanmela",
+    "name": "Arun Sabapathy & Qais Worroryar",
+    "subtitle": "GaanMela · Tabla & Afghan rubab",
+    "genre": "Tabla / rubab",
+    "time": "2:30 PM",
+    "description": "Tabla player Arun Sabapathy accompanies Qais Worroryar on rubab.",
+    "note": "Free GaanMela performance on the Upstairs stage; the organizer confirms this set time.",
+    "image": "assets/events/arun-sabapathy.webp",
+    "imageSource": "https://www.ochinpakhichicago.org/wp-content/uploads/2026/09/ArunSabapathy.jpeg"
+  },
+  {
+    "date": "2026-11-07",
+    "kind": "music",
+    "venue": "United Church of Rogers Park",
+    "city": "Chicago",
+    "ages": "Confirm age policy with organizer",
+    "address": "1545 W Morse Avenue, Chicago, IL 60626",
+    "url": "https://www.ochinpakhichicago.org/gaanmela/",
+    "free": true,
+    "verifiedOn": "2026-09-29",
+    "id": "aikyam-gaanmela",
+    "name": "Tanveer Singh Sapra & Aikyam live ensemble",
+    "subtitle": "GaanMela · Vocals, bansuri, violin & Arun Sabapathy on tabla",
+    "genre": "Hindustani music / Odissi",
+    "time": "6:30 PM",
+    "description": "Tanveer Singh Sapra, Sonny Patel, Lucia Thomas and Arun Sabapathy provide live music for Aikyam Odissi Dance Collective.",
+    "note": "Free GaanMela performance in the Sanctuary; the organizer confirms this set time.",
+    "image": "assets/events/aikyam.webp",
+    "imageSource": "https://www.ochinpakhichicago.org/wp-content/uploads/2026/09/colinmascarenhas-943x1024.jpeg"
+  },
+  {
+    "date": "2026-11-07",
+    "kind": "music",
+    "venue": "United Church of Rogers Park",
+    "city": "Chicago",
+    "ages": "Confirm age policy with organizer",
+    "address": "1545 W Morse Avenue, Chicago, IL 60626",
+    "url": "https://www.ochinpakhichicago.org/gaanmela/",
+    "free": true,
+    "verifiedOn": "2026-09-29",
+    "id": "arun-lehra-gaanmela",
+    "name": "Arun Sabapathy with Lehra Lehra",
+    "subtitle": "GaanMela · Sindhi folk / Sufi with tabla",
+    "genre": "Sindhi folk / Sufi",
+    "time": "8:45 PM",
+    "description": "Arun Sabapathy joins Lehra Lehra’s Sindhi folk and Sufi ensemble on tabla.",
+    "note": "Free GaanMela performance on the Upstairs stage; the organizer confirms this set time.",
+    "image": "assets/events/lehra-lehra.webp",
+    "imageSource": "https://www.ochinpakhichicago.org/wp-content/uploads/2026/09/LehraLehra-e1788542340594-1024x693.png"
+  },
+  {
+    "id": "nimesh-joliet",
+    "date": "2026-11-14",
+    "name": "Nimesh Patel",
+    "subtitle": "Stand-up comedy",
+    "kind": "comedy",
+    "genre": "Stand-up comedy",
+    "venue": "Hollywood Casino Joliet",
+    "city": "Joliet",
+    "time": "8:00 PM",
+    "ages": "Confirm event-specific age policy with venue",
+    "address": "1401 Gateway Boulevard, Joliet, IL 60431",
+    "url": "https://www.ticketmaster.com/nimesh-patel-joliet-illinois-11-14-2026/event/070064FDA476329A",
+    "description": "Indian-American comedian and writer Nimesh Patel performs at Hollywood Casino Joliet.",
+    "note": "Official Ticketmaster event and venue listings confirm November 14 at 8:00 PM. Confirm entry requirements and current ticket availability with the provider.",
+    "verifiedOn": "2026-09-29"
   }
 ].sort((a,b)=>a.date.localeCompare(b.date));
 const externalArrow='<svg class="external-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg>';const $=s=>document.querySelector(s);const arrow='<svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg>';const heart='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg>';let saved=new Set();try{const v=JSON.parse(localStorage.getItem('desi-shortlist')||'[]');if(Array.isArray(v))saved=new Set(v.filter(id=>events.some(e=>e.id===id)))}catch{}let kind='all';let toastTimer;let restoreFocus;
@@ -900,11 +996,11 @@ function notify(message){$('#toast').textContent=message;$('#toast').classList.a
 function toggleSave(id){const e=events.find(e=>e.id===id);if(!e)return;const removing=saved.has(id);removing?saved.delete(id):saved.add(id);let persisted=true;try{localStorage.setItem('desi-shortlist',JSON.stringify([...saved]))}catch{persisted=false}document.querySelectorAll(`[data-save="${id}"]`).forEach(b=>{b.setAttribute('aria-pressed',saved.has(id));b.setAttribute('aria-label',`${saved.has(id)?'Remove':'Save'} ${e.name} ${saved.has(id)?'from':'to'} shortlist`)});updateCount();if($('#shortlist-dialog').open)renderShortlist();notify(`${e.name} ${removing?'removed from':'added to'} your shortlist.${persisted?'':' Storage unavailable; saved for this visit.'}`)}
 function openDialog(id){restoreFocus=document.activeElement;$(id).showModal()}
 function renderShortlist(){const rows=events.filter(e=>saved.has(e.id));$('#shortlist-list').innerHTML=rows.length?rows.map(e=>`<article class="short-event"><div><h3>${e.name}</h3><p>${formatDate(e.date,{month:'short',day:'numeric',year:'numeric'})} · ${e.time}<br>${e.venue} · ${e.city}</p><a href="${e.url}" target="_blank" rel="noopener noreferrer">${e.free?'Venue details':'Details & tickets'} ${externalArrow}</a></div>${saveButton(e)}</article>`).join(''):'<div class="empty"><h3>Keep a night in mind.</h3><p>Tap a heart in the lineup to start your shortlist.</p><button class="text-link" data-close>Back to the lineup ${externalArrow}</button></div>'}
-function showDetail(id){const e=events.find(e=>e.id===id);if(!e)return;$('#detail-title').textContent=e.name;$('#detail-category').textContent=`${e.kind} / ${e.genre}`;$('#detail-content').innerHTML=`<p>${e.description}</p><dl class="detail-grid"><dt>When</dt><dd>${formatDate(e.date,{weekday:'long',month:'long',day:'numeric',year:'numeric'})}<br>${e.time} · Chicago local time</dd><dt>Where</dt><dd>${e.venue}<br>${e.address}</dd><dt>Entry</dt><dd>${e.ages}${e.free?' · Free admission':''}</dd></dl><p>${e.note}</p><div class="detail-actions"><a class="text-link" href="${e.url}" target="_blank" rel="noopener noreferrer">${e.free?'Open venue listing':'Details & tickets'} ${arrow}</a><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(e.address)}" target="_blank" rel="noopener noreferrer">Directions ${externalArrow}</a></div><p>Compared with tracked listings September 29, 2026. Source limitations are noted above. Prices and availability may change.</p>`;openDialog('#detail-dialog')}
+function showDetail(id){const e=events.find(e=>e.id===id);if(!e)return;$('#detail-title').textContent=e.name;$('#detail-category').textContent=`${e.kind} / ${e.genre}`;$('#detail-content').innerHTML=`<p>${e.description}</p><dl class="detail-grid"><dt>When</dt><dd>${formatDate(e.date,{weekday:'long',month:'long',day:'numeric',year:'numeric'})}<br>${e.time} · Chicago local time</dd><dt>Where</dt><dd>${e.venue}<br>${e.address}</dd><dt>Entry</dt><dd>${e.ages}${e.free?' · Free admission':''}</dd></dl><p>${e.note}</p><div class="detail-actions"><a class="text-link" href="${e.url}" target="_blank" rel="noopener noreferrer">${e.free?'Open venue listing':'Details & tickets'} ${arrow}</a><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(e.address)}" target="_blank" rel="noopener noreferrer">Directions ${externalArrow}</a></div><p>${e.verifiedOn?`Checked against the official listing on ${formatDate(e.verifiedOn,{month:'long',day:'numeric',year:'numeric'})}.`:'Compared with tracked listings September 29, 2026. Source limitations are noted above.'} Prices and availability may change.</p>`;openDialog('#detail-dialog')}
 function reset(){kind='all';$('#search').value='';$('#location').value='all';document.querySelectorAll('[data-kind]').forEach(b=>{b.classList.toggle('selected',b.dataset.kind==='all');b.setAttribute('aria-pressed',b.dataset.kind==='all')});render()}
 document.addEventListener('click',e=>{const save=e.target.closest('[data-save]');if(save)toggleSave(save.dataset.save);const detail=e.target.closest('[data-detail]');const row=e.target.closest('[data-event]');if(detail)showDetail(detail.dataset.detail);else if(row&&!e.target.closest('a,button'))showDetail(row.dataset.event);const close=e.target.closest('[data-close]');if(close)close.closest('dialog').close()});document.querySelectorAll('[data-kind]').forEach(button=>button.addEventListener('click',()=>{kind=button.dataset.kind;document.querySelectorAll('[data-kind]').forEach(b=>{b.classList.toggle('selected',b===button);b.setAttribute('aria-pressed',b===button)});render()}));$('#search').addEventListener('input',render);$('#location').addEventListener('change',render);$('#clear-filters').addEventListener('click',reset);$('#empty-reset').addEventListener('click',reset);$('#shortlist-open').addEventListener('click',()=>{renderShortlist();openDialog('#shortlist-dialog')});$('#about-open').addEventListener('click',()=>openDialog('#about-dialog'));document.querySelectorAll('dialog').forEach(d=>{d.addEventListener('close',()=>restoreFocus?.focus());d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close()}})});render();
 
-// Track public event IDs and selected categories only after analytics opt-in.
+// Track public event IDs and categories only when the analytics policy permits collection.
 document.addEventListener('click', event => {
   const ticket = event.target.closest('.tickets, .short-event a, .detail-actions .text-link');
   if (ticket) {
