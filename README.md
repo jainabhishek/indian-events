@@ -20,7 +20,9 @@ Cloudflare Pages project: `desi-on-stage-chicago`. It uses Direct Upload; pushin
 wrangler pages deploy <staging-directory> --project-name desi-on-stage-chicago --branch main
 ```
 
-The Cloudflare-managed `luckbhi.com` zone has a `desievents` CNAME pointing to `desi-on-stage-chicago.pages.dev`. The former custom domain and its GoDaddy DNS record have been removed without a redirect.
+The Cloudflare-managed `luckbhi.com` zone has a `desievents` CNAME pointing to `desi-on-stage-chicago.pages.dev`. The subdomain is attached to the Pages project as an active custom domain with HTTPS.
+
+The former `events.abhishekja.in` custom domain has been detached; no redirect is configured. Its obsolete GoDaddy `events` CNAME has also been deleted; GoDaddy authoritative DNS confirms the old hostname no longer exists. Chicago remains the current edition. Future city editions can use paths under `desievents.luckbhi.com`, such as `/chicago`, without introducing separate city subdomains.
 
 ## Analytics and privacy
 
