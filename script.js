@@ -997,7 +997,50 @@ const events=[
     "imageSource": "https://s1.ticketm.net/dam/a/581/c62603f9-c6ff-41bb-8794-fb0338525581_RETINA_PORTRAIT_3_2.jpg",
     "imageSourcePage": "https://www.ticketmaster.com/nimesh-patel-joliet-illinois-11-14-2026/event/070064FDA476329A",
     "imageAlt": "Nimesh Patel promotional photograph"
+  },
+  {
+    "id": "pallavi-chicago",
+    "date": "2026-11-06",
+    "name": "Pallavi Mahidhara",
+    "subtitle": "Rembrandt Chamber Musicians · Piano & strings",
+    "kind": "music",
+    "genre": "Classical piano / chamber music",
+    "venue": "Chicago Temple, Dixon Chapel",
+    "city": "Chicago",
+    "time": "7:00 PM",
+    "ages": "Confirm age policy with organizer",
+    "address": "77 W Washington Street, 2nd Floor, Chicago, IL 60602",
+    "url": "https://www.rembrandtchambermusicians.org/full-list-of-events",
+    "description": "Indian-American pianist Pallavi Mahidhara joins Rembrandt Chamber Musicians for works by Beethoven, Frank Bridge, and Dohnányi.",
+    "note": "Pallavi Mahidhara plays Dohnanyi. Date, local time, and venue confirmed by the official Rembrandt season calendar. Check the provider for ticket availability and entry policies.",
+    "verifiedOn": "2026-09-30",
+    "image": "assets/events/pallavi-rembrandt.webp",
+    "imageSource": "https://www.musicinst.org/sites/default/files/images/RembrandtChamber2026-2027.png",
+    "imageSourcePage": "https://www.musicinst.org/events/rembrandt-chamber-musicians-presents-pallavi-mahidhara-plays-dohnanyi",
+    "imageAlt": "Official poster for Pallavi Mahidhara with Rembrandt Chamber Musicians, November 6 in Chicago and November 8 in Evanston."
+  },
+  {
+    "id": "pallavi-evanston",
+    "date": "2026-11-08",
+    "name": "Pallavi Mahidhara",
+    "subtitle": "Rembrandt Chamber Musicians · Piano & strings",
+    "kind": "music",
+    "genre": "Classical piano / chamber music",
+    "venue": "Nichols Concert Hall",
+    "city": "Evanston",
+    "time": "3:00 PM",
+    "ages": "Confirm age policy with organizer",
+    "address": "1490 Chicago Avenue, Evanston, IL 60201",
+    "url": "https://www.musicinst.org/events/rembrandt-chamber-musicians-presents-pallavi-mahidhara-plays-dohnanyi",
+    "description": "Indian-American pianist Pallavi Mahidhara joins Rembrandt Chamber Musicians for works by Beethoven, Frank Bridge, and Dohnányi.",
+    "note": "Pallavi Mahidhara plays Dohnanyi. Date, local time, and venue confirmed by the official Rembrandt season calendar. Check the provider for ticket availability and entry policies.",
+    "verifiedOn": "2026-09-30",
+    "image": "assets/events/pallavi-rembrandt.webp",
+    "imageSource": "https://www.musicinst.org/sites/default/files/images/RembrandtChamber2026-2027.png",
+    "imageSourcePage": "https://www.musicinst.org/events/rembrandt-chamber-musicians-presents-pallavi-mahidhara-plays-dohnanyi",
+    "imageAlt": "Official poster for Pallavi Mahidhara with Rembrandt Chamber Musicians, November 6 in Chicago and November 8 in Evanston."
   }
+
 ].sort((a,b)=>a.date.localeCompare(b.date));
 const externalArrow='<svg class="external-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg>';const $=s=>document.querySelector(s);const arrow='<svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg>';const heart='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg>';let saved=new Set();try{const v=JSON.parse(localStorage.getItem('desi-shortlist')||'[]');if(Array.isArray(v))saved=new Set(v.filter(id=>events.some(e=>e.id===id)))}catch{}let kind='all';let toastTimer;let restoreFocus;
 const formatDate=(date,options)=>new Intl.DateTimeFormat('en-US',{...options,timeZone:'America/Chicago'}).format(new Date(`${date}T12:00:00-05:00`));
