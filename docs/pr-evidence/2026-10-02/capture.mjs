@@ -5,7 +5,7 @@ import { resolve, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { chromium } from 'playwright';
 
-const repo = fileURLToPath(new URL('../../../', import.meta.url));
+const repo = resolve(fileURLToPath(new URL('../../../', import.meta.url)));
 if (!process.argv[2]) throw new Error('Pass the absolute path of the baseline snapshot');
 const baseline = resolve(process.argv[2]);
 const output = resolve(repo, 'output/playwright/near-term-2026-10-02');

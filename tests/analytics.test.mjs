@@ -140,6 +140,19 @@ describe('local outbound analytics', () => {
       assert.equal(await page.locator('#empty').isVisible(), true);
       await page.locator('#clear-filters').click();
       assert.equal(await page.locator('#event-list [data-event="arvind"]').count(), 0);
+      assert.match(await page.locator('.source-note').innerText(), /Diwali Morning Concert lineup.*October 1, 2026/);
+      assert.match(await page.locator('.source-note').innerText(), /Geeta Rabari, and Unlimited Aura.*October 2, 2026/);
+      for (const artist of ['Abhed Abhisheki', 'Makarand Hingne']) {
+        await page.locator('#search').fill(artist);
+        assert.equal(await page.locator('#event-list .event').count(), 1);
+        assert.match(await page.locator('#event-list [data-event="shounak"] h3').innerText(),
+          /Shounak Abhisheki, Abhed Abhisheki & Makarand Hingne/);
+      }
+      await page.locator('#event-list [data-detail="shounak"]').click();
+      assert.match(await page.locator('#detail-content').innerText(), /8:30 AM; concert begins at 9:30 AM/);
+      assert.match(await page.locator('#detail-content').innerText(), /official promoter Para Share/);
+      await page.getByRole('button', { name: 'Close event details', exact: true }).click();
+      await page.locator('#clear-filters').click();
 
       for (const [id, caveat] of [['geeta', /Online sold out.*Gate tickets may be available; confirm with organizer/],
         ['aura', /Ticket purchase path not verified/]]) {

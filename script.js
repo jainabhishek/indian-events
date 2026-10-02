@@ -732,7 +732,7 @@ const events=[
   {
     "id": "shounak",
     "date": "2026-11-08",
-    "name": "Shounak Abhisheki",
+    "name": "Shounak Abhisheki, Abhed Abhisheki & Makarand Hingne",
     "subtitle": "Diwali Morning Concert · Indian classical",
     "kind": "music",
     "genre": "Diwali Morning Concert · Indian classical",
@@ -742,10 +742,13 @@ const events=[
     "ages": "Confirm age policy with organizer",
     "address": "Al Larson Prairie Center for the Arts, Schaumburg, IL",
     "url": "https://events.sulekha.com/diwali-morning-concert-in-chicago-il_event-in_schaumburg-il_400388",
-    "description": "Shounak Abhisheki performs at Al Larson Prairie Center for the Arts in Schaumburg.",
-    "note": "Confirm current entry requirements, prices, and availability with the linked provider.",
+    "description": "Shounak Abhisheki, Abhed Abhisheki and Makarand Hingne present a Hindustani classical and semi-classical tribute to Pandit Jitendra Abhisheki at Al Larson Prairie Center for the Arts in Schaumburg.",
+    "note": "Doors open at 8:30 AM; concert begins at 9:30 AM Chicago local time. Tickets listed at $40–$60 before fees; confirm availability with the provider. Lineup confirmed by official promoter Para Share: https://www.parashare.com/diwali",
     "image": "assets/events/shounak.webp",
-    "imageSource": "https://usimg.sulekha.io/cdn/events/images/thumbnail/diwali-morning-concert-in-chicago-il_2026-06-04-04-48-37-799_14.webp"
+    "imageSource": "https://usimg.sulekha.io/cdn/events/images/thumbnail/diwali-morning-concert-in-chicago-il_2026-06-04-04-48-37-799_14.webp",
+    "imageSourcePage": "https://events.sulekha.com/diwali-morning-concert-in-chicago-il_event-in_schaumburg-il_400388",
+    "imageAlt": "Chicago Diwali Concert 2026 poster honoring Pandit Jitendra Abhisheki and naming Shounak Abhisheki, Makarand Hingne and Abhed Abhisheki.",
+    "verifiedOn": "2026-10-01"
   },
   {
     "id": "vik-11-09",

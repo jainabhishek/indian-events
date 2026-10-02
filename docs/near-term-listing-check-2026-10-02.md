@@ -15,3 +15,5 @@ Click attribution remains the existing `select_content` event with stable `conte
 Regression coverage uses real local rendering on desktop and mobile: cancellation across filters, saved cancellation disclosure and removal, availability wording, destination labels, verification dates, existing analytics payloads, and analytics refusal. External requests are blocked or locally stubbed; outbound clicks are intercepted before navigation, including popups.
 
 Gate inventory and an alternative Aura purchase path remain unverified. Listings are manually curated and provider availability may change after this check.
+
+Current main `143fe34e95af1a2fe4c0462a527a84c87add0439` was merged into the feature branch after PR #11. The shared metadata keeps the Diwali Morning Concert verification note alongside the three near-term checks. The full Shounak/Abhed/Makarand record matches main exactly; only `arvind`, `geeta`, and `aura` differ among the 57 event records. Regression checks also cover searching for Abhed and Makarand, the expanded detail copy, and both source notes. Screenshot comparisons were refreshed against this current main baseline.

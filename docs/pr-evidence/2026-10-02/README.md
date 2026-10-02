@@ -1,7 +1,7 @@
 # Listing accuracy visual evidence
 
-Before: untouched `main` at `75f5b62f97d7020ae58b4a226159132623f56be4`.
-After: this branch's listing changes. Both use Chromium, fixed October 2, 2026
+Before: untouched `main` at `143fe34e95af1a2fe4c0462a527a84c87add0439`.
+After: this branch's listing changes with current main merged in. Both retain the expanded Shounak/Abhed/Makarand lineup from PR #11. Both use Chromium, fixed October 2, 2026
 at 17:00 UTC, reduced motion, and the same viewport: desktop 1440×1000 or
 mobile 390×844. Garba screenshots capture the full page, so content removal
 changes image height. Dialog screenshots capture the viewport.
@@ -26,7 +26,7 @@ Reproduce from the repository root after `npm ci` and installing Chromium:
 
 ```sh
 mkdir -p /tmp/indian-events-listing-baseline
-git archive 75f5b62f97d7020ae58b4a226159132623f56be4 | tar -x -C /tmp/indian-events-listing-baseline
+git archive 143fe34e95af1a2fe4c0462a527a84c87add0439 | tar -x -C /tmp/indian-events-listing-baseline
 node docs/pr-evidence/2026-10-02/capture.mjs /tmp/indian-events-listing-baseline
 ```
 
