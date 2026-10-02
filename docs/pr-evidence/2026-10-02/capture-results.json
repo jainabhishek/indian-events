@@ -1,0 +1,286 @@
+[
+  {
+    "device": "desktop",
+    "stage": "before",
+    "scenario": "garba",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "count": "5 UPCOMING NIGHTS · FALL 2026",
+    "ids": [
+      "aghori",
+      "arvind",
+      "geeta",
+      "vatsala",
+      "mehul"
+    ],
+    "horizontalOverflow": false,
+    "overflowElements": []
+  },
+  {
+    "device": "desktop",
+    "stage": "before",
+    "scenario": "aura",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "text": "MUSIC / TAMIL / LIVE CONCERT\n×\nSivaangi & Maanasi\n\nUnlimited Aura brings Sivaangi and Maanasi to Naperville for an evening of Tamil music and live vocals.\n\nWhen\nFriday, October 9, 2026\n7:00 PM doors · Chicago local time\nWhere\nYellow Box\n1635 Emerson Lane, Naperville, IL\nEntry\nAll ages\n\nThe organizer lists doors at 7:00 PM. Confirm the show start and duration with Sulekha.\n\nDetails & tickets\nDirections \n\nCompared with tracked listings September 29, 2026. Source limitations are noted above. Prices and availability may change."
+  },
+  {
+    "device": "desktop",
+    "stage": "before",
+    "scenario": "shortlist",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "text": "Your shortlist.\n×\n\nThe nights you don’t want to miss. Saved on this device.\n\nArvind Vegda & Devanshi Shah\n\nOct 3, 2026 · 6:00 PM\nJain Society of Metropolitan Chicago · Bartlett\n\nDetails & tickets \nGeeta Rabari\n\nOct 4, 2026 · 6:00 PM\nRenaissance Schaumburg · Schaumburg\n\nDetails & tickets \nSivaangi & Maanasi\n\nOct 9, 2026 · 7:00 PM doors\nYellow Box · Naperville\n\nDetails & tickets ",
+    "dialogScrollHeight": 583,
+    "dialogClientHeight": 583
+  },
+  {
+    "device": "desktop",
+    "stage": "after",
+    "scenario": "garba",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "count": "4 UPCOMING NIGHTS · FALL 2026",
+    "ids": [
+      "aghori",
+      "geeta",
+      "vatsala",
+      "mehul"
+    ],
+    "horizontalOverflow": false,
+    "overflowElements": []
+  },
+  {
+    "device": "desktop",
+    "stage": "after",
+    "scenario": "aura",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "text": "MUSIC / TAMIL / LIVE CONCERT\n×\nSivaangi & Maanasi\n\nUnlimited Aura brings Sivaangi and Maanasi to Naperville for an evening of Tamil music and live vocals.\n\nWhen\nFriday, October 9, 2026\n7:00 PM doors · Chicago local time\nWhere\nYellow Box\n1635 Emerson Lane, Naperville, IL\nEntry\nAll ages\n\nThe organizer lists doors at 7:00 PM. This Sulekha page provides event information; a ticket purchase path has not been verified. Confirm show start, duration, and ticket availability with the organizer.\n\nEvent details\nDirections \n\nChecked against the official listing on October 2, 2026. Prices and availability may change."
+  },
+  {
+    "device": "desktop",
+    "stage": "after",
+    "scenario": "shortlist",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "text": "Your shortlist.\n×\n\nThe nights you don’t want to miss. Saved on this device.\n\nArvind Vegda & Devanshi Shah\n\nOct 3, 2026 · 6:00 PM\nJain Society of Metropolitan Chicago · Bartlett\nCancelled · Sulekha says refunds have been initiated.\n\nEvent details \nGeeta Rabari\n\nOct 4, 2026 · 6:00 PM\nRenaissance Schaumburg · Schaumburg\nOnline sold out · Gate tickets may be available; confirm with organizer.\n\nEvent details \nSivaangi & Maanasi\n\nOct 9, 2026 · 7:00 PM doors\nYellow Box · Naperville\nEvent information · Ticket purchase path not verified.\n\nEvent details ",
+    "dialogScrollHeight": 637,
+    "dialogClientHeight": 637
+  },
+  {
+    "device": "mobile",
+    "stage": "before",
+    "scenario": "garba",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "count": "5 UPCOMING NIGHTS · FALL 2026",
+    "ids": [
+      "aghori",
+      "arvind",
+      "geeta",
+      "vatsala",
+      "mehul"
+    ],
+    "horizontalOverflow": true,
+    "overflowElements": [
+      {
+        "tag": "NAV",
+        "class": "",
+        "text": "ExploreThe shortlist 3",
+        "rect": {
+          "x": 248.75,
+          "y": 10.5,
+          "width": 147.984375,
+          "height": 45,
+          "top": 10.5,
+          "right": 396.734375,
+          "bottom": 55.5,
+          "left": 248.75
+        }
+      },
+      {
+        "tag": "A",
+        "class": "header-contact",
+        "text": "",
+        "rect": {
+          "x": 352.734375,
+          "y": 11,
+          "width": 44,
+          "height": 44,
+          "top": 11,
+          "right": 396.734375,
+          "bottom": 55,
+          "left": 352.734375
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "hero-art",
+        "text": "",
+        "rect": {
+          "x": 192,
+          "y": 66,
+          "width": 240,
+          "height": 179.28125,
+          "top": 66,
+          "right": 432,
+          "bottom": 245.28125,
+          "left": 192
+        }
+      },
+      {
+        "tag": "IMG",
+        "class": "",
+        "text": "",
+        "rect": {
+          "x": 192,
+          "y": 48,
+          "width": 260,
+          "height": 230,
+          "top": 48,
+          "right": 452,
+          "bottom": 278,
+          "left": 192
+        }
+      }
+    ]
+  },
+  {
+    "device": "mobile",
+    "stage": "before",
+    "scenario": "aura",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "text": "MUSIC / TAMIL / LIVE CONCERT\n×\nSivaangi & Maanasi\n\nUnlimited Aura brings Sivaangi and Maanasi to Naperville for an evening of Tamil music and live vocals.\n\nWhen\nFriday, October 9, 2026\n7:00 PM doors · Chicago local time\nWhere\nYellow Box\n1635 Emerson Lane, Naperville, IL\nEntry\nAll ages\n\nThe organizer lists doors at 7:00 PM. Confirm the show start and duration with Sulekha.\n\nDetails & tickets\nDirections \n\nCompared with tracked listings September 29, 2026. Source limitations are noted above. Prices and availability may change."
+  },
+  {
+    "device": "mobile",
+    "stage": "before",
+    "scenario": "shortlist",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "text": "Your shortlist.\n×\n\nThe nights you don’t want to miss. Saved on this device.\n\nArvind Vegda & Devanshi Shah\n\nOct 3, 2026 · 6:00 PM\nJain Society of Metropolitan Chicago · Bartlett\n\nDetails & tickets \nGeeta Rabari\n\nOct 4, 2026 · 6:00 PM\nRenaissance Schaumburg · Schaumburg\n\nDetails & tickets \nSivaangi & Maanasi\n\nOct 9, 2026 · 7:00 PM doors\nYellow Box · Naperville\n\nDetails & tickets ",
+    "dialogScrollHeight": 675,
+    "dialogClientHeight": 675
+  },
+  {
+    "device": "mobile",
+    "stage": "after",
+    "scenario": "garba",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "count": "4 UPCOMING NIGHTS · FALL 2026",
+    "ids": [
+      "aghori",
+      "geeta",
+      "vatsala",
+      "mehul"
+    ],
+    "horizontalOverflow": true,
+    "overflowElements": [
+      {
+        "tag": "NAV",
+        "class": "",
+        "text": "ExploreThe shortlist 3",
+        "rect": {
+          "x": 248.75,
+          "y": 10.5,
+          "width": 147.984375,
+          "height": 45,
+          "top": 10.5,
+          "right": 396.734375,
+          "bottom": 55.5,
+          "left": 248.75
+        }
+      },
+      {
+        "tag": "A",
+        "class": "header-contact",
+        "text": "",
+        "rect": {
+          "x": 352.734375,
+          "y": 11,
+          "width": 44,
+          "height": 44,
+          "top": 11,
+          "right": 396.734375,
+          "bottom": 55,
+          "left": 352.734375
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "hero-art",
+        "text": "",
+        "rect": {
+          "x": 192,
+          "y": 66,
+          "width": 240,
+          "height": 179.28125,
+          "top": 66,
+          "right": 432,
+          "bottom": 245.28125,
+          "left": 192
+        }
+      },
+      {
+        "tag": "IMG",
+        "class": "",
+        "text": "",
+        "rect": {
+          "x": 192,
+          "y": 48,
+          "width": 260,
+          "height": 230,
+          "top": 48,
+          "right": 452,
+          "bottom": 278,
+          "left": 192
+        }
+      }
+    ]
+  },
+  {
+    "device": "mobile",
+    "stage": "after",
+    "scenario": "aura",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "text": "MUSIC / TAMIL / LIVE CONCERT\n×\nSivaangi & Maanasi\n\nUnlimited Aura brings Sivaangi and Maanasi to Naperville for an evening of Tamil music and live vocals.\n\nWhen\nFriday, October 9, 2026\n7:00 PM doors · Chicago local time\nWhere\nYellow Box\n1635 Emerson Lane, Naperville, IL\nEntry\nAll ages\n\nThe organizer lists doors at 7:00 PM. This Sulekha page provides event information; a ticket purchase path has not been verified. Confirm show start, duration, and ticket availability with the organizer.\n\nEvent details\nDirections \n\nChecked against the official listing on October 2, 2026. Prices and availability may change."
+  },
+  {
+    "device": "mobile",
+    "stage": "after",
+    "scenario": "shortlist",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "text": "Your shortlist.\n×\n\nThe nights you don’t want to miss. Saved on this device.\n\nArvind Vegda & Devanshi Shah\n\nOct 3, 2026 · 6:00 PM\nJain Society of Metropolitan Chicago · Bartlett\nCancelled · Sulekha says refunds have been initiated.\n\nEvent details \nGeeta Rabari\n\nOct 4, 2026 · 6:00 PM\nRenaissance Schaumburg · Schaumburg\nOnline sold out · Gate tickets may be available; confirm with organizer.\n\nEvent details \nSivaangi & Maanasi\n\nOct 9, 2026 · 7:00 PM doors\nYellow Box · Naperville\nEvent information · Ticket purchase path not verified.\n\nEvent details ",
+    "dialogScrollHeight": 783,
+    "dialogClientHeight": 717
+  }
+]

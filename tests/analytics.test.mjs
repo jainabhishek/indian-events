@@ -46,8 +46,9 @@ describe('local outbound analytics', () => {
     if (server) await new Promise(resolve => server.close(resolve));
   });
 
-  async function openPage(t, { consent = 'granted', country = 'DE', gpc = false, missingAnalytics = false } = {}) {
-    const context = await browser.newContext({ serviceWorkers: 'block', reducedMotion: 'reduce' });
+  async function openPage(t, { consent = 'granted', country = 'DE', gpc = false, missingAnalytics = false,
+    viewport, saved = [], date = '2026-09-30T17:00:00Z' } = {}) {
+    const context = await browser.newContext({ serviceWorkers: 'block', reducedMotion: 'reduce', viewport });
     t.after(() => context.close());
     const externalRequests = [];
     // Installed before any page exists: no provider, Maps, GA, or other external
@@ -67,11 +68,12 @@ describe('local outbound analytics', () => {
         await route.fulfill({ contentType: 'text/javascript', body: '// Analytics deliberately unavailable.' });
       } else await route.continue();
     });
-    await context.addInitScript(({ consent, consentKey, gpc }) => {
+    await context.addInitScript(({ consent, consentKey, gpc, saved }) => {
       // Preserve choices on reload so revocation exercises the actual saved-denied path.
       if (!sessionStorage.getItem('regression-initialized')) {
         localStorage.clear();
         if (consent) localStorage.setItem(consentKey, consent);
+        if (saved.length) localStorage.setItem('desi-shortlist', JSON.stringify(saved));
         sessionStorage.setItem('regression-initialized', 'yes');
       }
       Object.defineProperty(navigator, 'globalPrivacyControl', { value: gpc });
@@ -83,9 +85,9 @@ describe('local outbound analytics', () => {
           event.preventDefault(); // Leave propagation intact for the real delegated listener.
         }
       }, true);
-    }, { consent, consentKey, gpc });
+    }, { consent, consentKey, gpc, saved });
     const page = await context.newPage();
-    await page.clock.setFixedTime(new Date('2026-09-30T17:00:00Z'));
+    await page.clock.setFixedTime(new Date(date));
     await page.goto(origin);
     await page.locator('#event-list .event').first().waitFor();
     if (!missingAnalytics && !gpc && consent !== 'denied') {
@@ -116,6 +118,76 @@ describe('local outbound analytics', () => {
     assert.deepEqual(after.at(-1), { content_type: 'event', content_id: id,
       link_type: freeIds.includes(id) ? 'venue_details' : 'tickets' });
   }
+
+  for (const [device, viewport] of [['desktop', { width: 1440, height: 1000 }],
+    ['mobile', { width: 390, height: 844 }]]) {
+    test(`near-term listing accuracy and existing click attribution on ${device}`, async t => {
+      const { page } = await openPage(t, { viewport, saved: ['arvind', 'geeta', 'aura'],
+        date: '2026-10-02T17:00:00Z' });
+      assert.equal(await page.locator('#event-list [data-event="arvind"]').count(), 0);
+      for (const id of ['kinjal', 'prateek', 'jahnavi']) {
+        assert.equal(await page.locator(`#event-list [data-event="${id}"]`).count(), 0);
+      }
+      assert.equal(await page.evaluate(() => events.find(e => e.id === 'arvind').status), 'cancelled');
+      assert.equal(await page.evaluate(() => events.find(e => e.id === 'geeta').status), undefined);
+      await page.locator('.listing-updates summary').click();
+      assert.match(await page.locator('.listing-updates').innerText(), /Arvind Vegda & Devanshi Shah.*cancelled; Sulekha says refunds have been initiated/);
+      if (device === 'mobile') await page.locator('#search-toggle').click();
+      await page.locator('#search').fill('Arvind');
+      await page.locator('[data-kind="music"]').click();
+      await page.locator('#location').selectOption('suburbs');
+      assert.equal(await page.locator('#event-list .event').count(), 0);
+      assert.equal(await page.locator('#empty').isVisible(), true);
+      await page.locator('#clear-filters').click();
+      assert.equal(await page.locator('#event-list [data-event="arvind"]').count(), 0);
+
+      for (const [id, caveat] of [['geeta', /Online sold out.*Gate tickets may be available; confirm with organizer/],
+        ['aura', /Ticket purchase path not verified/]]) {
+        const row = page.locator(`#event-list [data-event="${id}"]`);
+        assert.match(await row.innerText(), caveat);
+        const link = row.locator('a[data-event-link]');
+        assert.equal(await link.locator('span').innerText(), 'Event details');
+        assert.match(await link.getAttribute('aria-label'), /^Event details for /);
+        await clickListing(page, link, id, 'span');
+        await row.locator('[data-detail]').click();
+        const detail = page.locator('#detail-content');
+        assert.match(await detail.innerText(), id === 'geeta'
+          ? /Online tickets are sold out.*may still be available at the gates.*Manpasand/
+          : /a ticket purchase path has not been verified/);
+        assert.match(await detail.innerText(), /October 2, 2026/);
+        assert.equal((await detail.locator('a[data-event-link]').innerText()).trim(), 'Event details');
+        await clickListing(page, detail.locator('a[data-event-link]'), id, 'path');
+        await page.getByRole('button', { name: 'Close event details', exact: true }).click();
+      }
+
+      await page.locator('#shortlist-open').click();
+      for (const id of ['arvind', 'geeta', 'aura']) {
+        const link = page.locator(`#shortlist-list a[data-event-link="${id}"]`);
+        assert.equal((await link.innerText()).trim(), 'Event details');
+        await clickListing(page, link, id, 'svg');
+      }
+      const shortlist = await page.locator('#shortlist-list').innerText();
+      assert.match(shortlist, /Cancelled · Sulekha says refunds have been initiated/);
+      assert.match(shortlist, /Online sold out.*Gate tickets may be available/);
+      assert.match(shortlist, /Ticket purchase path not verified/);
+      await page.locator('#shortlist-list [data-save="arvind"]').click();
+      assert.equal(await page.locator('#shortlist-list a[data-event-link="arvind"]').count(), 0);
+      assert.deepEqual(await page.evaluate(() => JSON.parse(localStorage.getItem('desi-shortlist'))), ['geeta', 'aura']);
+      assert.equal((await eventsNamed(page)).length, 7);
+      assert.equal(await page.evaluate(() => window.interceptedOutbound.length), 7);
+      assert.equal(await page.locator('#shortlist-list').evaluate(list =>
+        [...list.querySelectorAll('a')].every(a => a.getBoundingClientRect().right <= innerWidth)), true);
+    });
+  }
+
+  test('informational destinations still respect analytics refusal', async t => {
+    const { page, externalRequests } = await openPage(t, { consent: 'denied' });
+    for (const id of ['geeta', 'aura']) {
+      await page.locator(`#event-list a[data-event-link="${id}"] span`).click();
+    }
+    assert.deepEqual(await eventsNamed(page), []);
+    assert.equal(externalRequests.length, 0);
+  });
 
   test('each shared-URL event keeps its ID across lineup, details, and shortlist', async t => {
     const { page } = await openPage(t);
